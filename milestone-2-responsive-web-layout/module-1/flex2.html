@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        nav a {
+            text-decoration: none;
+            padding: 20px;
+        }
+        .from-data{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            border: 1px solid blue;
+        }
+        .from-data input {
+            margin-top: 30px;
+            padding: 15px;
+        }
+        .from-section{
+            display: flex;
+            justify-content: center;
+            height: 90vh;
+            align-items: center;
+            
+        }
+        
+    </style>
+</head>
+<body>
+        <nav>
+            <div>
+                <a href="">Home</a>
+                <a href="">about</a>
+                <a href="">contact</a>
+                <a href="">service</a>
+            </div>
+            <a href="">Login</a>
+        </nav>
+        <section class="from-section" >
+            <form class="from-data" action="">
+                <h1>Please login</h1>
+                <input type="email" name="" placeholder="email" id="">
+                <input type="password" name="" placeholder="password" id="">
+                <input type="submit" value="Login">
+            </form>
+        </section>
+</body>
+</html>

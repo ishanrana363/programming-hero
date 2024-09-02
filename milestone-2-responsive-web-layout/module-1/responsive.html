@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        .food{
+            border: 2px solid red;
+        }
+        .food img{
+            width: 100%;
+        }
+        /* small screen */
+
+        @media screen and (max-width:576px) {
+            .container{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                text-align: center;
+            }
+            .food{
+                margin-top: 30px;
+                padding: 30px;
+            }
+            .food img {
+                width: 90%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                
+            }
+        }
+
+        /* medium device */
+
+    @media screen and (min-width: 577px) and (max-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Adjusted to display 3 columns */
+        text-align: center;
+        column-gap: 20px;
+    }
+    .food {
+        margin-top: 30px;
+        padding: 30px;
+    }
+    .food img {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+/* large device */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Adjusted to display 3 columns */
+        text-align: center;
+        column-gap: 20px;
+    }
+    .food {
+        margin-top: 30px;
+        padding: 30px;
+    }
+    .food img {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* extra large device */
+
+@media screen and (min-width: 1201px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* Adjusted to display 3 columns */
+        text-align: center;
+        column-gap: 20px;
+    }
+    .food {
+        margin-top: 30px;
+        padding: 30px;
+    }
+    .food img {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+        <div class="food">
+            <img src="/img/food.jpg" alt="">
+            <p>Price : 100$ </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque itaque architecto ab, voluptas obcaecati debitis rem ut necessitatibus consectetur perspiciatis!
+        </div>
+    </div>
+</body>
+</html>

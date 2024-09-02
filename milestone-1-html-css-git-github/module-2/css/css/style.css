@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.blog{
+    background-color: beige;
+    width: 500px;
+    overflow: auto;
+    border-top: 2px dotted black ;
+    border-bottom: 3px groove  rgb(49, 251, 4) ;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 10px 5px 15px rgba(252, 165, 4, 0.56) ;
+}
+
+#bg{
+    background-image: url("/img/img.jpg");
+    background-size: contain;
+    /* width: 100%; */
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: bottom right ;
+}

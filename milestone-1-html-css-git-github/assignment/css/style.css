@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+header{
+    background-color: #E55473;
+    background-image: url("../FlowerAsset/pngwing10.png");
+    background-repeat: no-repeat;
+    background-position: bottom right ;
+    background-size: contain;
+
+    margin: 0 auto;
+}
+.header-title{
+    padding-top: 100px;
+}
+.header{
+    padding-left: 250px;
+    padding-right: 250px;
+}
+
+.feature{
+    padding:50px 0px;
+}
+
+.feature-title{
+    font-weight: bolder;
+    text-align: center;
+    color: #272727;
+}
+.feature-des{
+    color: #272727;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.img{
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 0 auto;
+}
+
+.img1{
+    width: 500px;
+    height: 400px;
+    background-color: #A72162;   
+    border-radius: 160px 160px 0px 0px;
+    /* position: absolute; */
+}
+
+
+.img-container{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rose-div{
+    width: 500px;
+    height: 330px;
+    background-color: #0597A0;   
+    border-radius: 160px 160px 0px 0px;
+
+}
+.rose-img{
+    width:80%;
+    margin-left: 20px;
+    padding-top: 100px;
+}
+
+.anchtag{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.antag-list{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    margin-top: 20px;
+}
+.rose-div a {
+    margin-left: 50px;
+    margin-top: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.icon{
+    margin: 80px 200px;
+    background-color: #a5a1a1;
+
+}
+
+.icon-details{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 50px;
+}
+.icon-details img {
+    margin-left: 70px;
+}
+.icon-details p{
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+.instagram-title{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+}
+.instagram-des{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 17px;
+}
+
+.instagram-img{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.instagram-img-list{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.instagram-img-list img{
+    width: 100%;
+}
+
+.deal-section{
+    background-image: url("../FlowerAsset/Rectangle9.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;    
+    padding: 100px 0;
+
+}
+.deal{
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.deal-title{
+    text-align: center;
+}
+.deal{
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.deal-des{
+    text-align: center;
+    padding: 10px 0;
+}
+.deal-input{
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-left: 20%;
+    margin-top: 20px;
+    padding-left: 30px;
+}
+.btn2 {
+    padding: 11px;
+    border: none;
+    background-color: #A72162;
+    color: white;
+    outline: none;
+
+}
+
+footer{
+    padding: 100px 200px ;
+    background-color: #272727;
+    color: white;
+    margin-top: 100px;
+}
+
+.footer-title{
+    text-align: center;
+}
+.footer-des{
+    text-align: center;
+    padding: 15px 0;
+}
+.footer-copy{
+    text-align: center;
+}

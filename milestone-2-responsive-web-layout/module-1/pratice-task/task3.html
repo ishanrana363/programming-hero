@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-3</title>
+    <style>
+        .img-div{
+            width: 30%;
+        }
+        .text{
+            width: 70%;
+        }
+        .btn{
+            padding: 15px 20px;
+            border: none;
+            background: rgb(251, 137, 7);
+            margin-bottom: 20px;
+        }
+
+        .section-1{
+            display: flex;
+        }
+
+        @media screen and (max-width:570px) {
+            .section-1{
+                display: flex;
+                flex-direction: column;
+            }
+            .img-div{
+                width: 100%;
+                border: 2px solid black;
+            }
+            .img-div img{
+                width: 100%;
+                border: 1px solid rebeccapurple;
+            }
+            .text{
+                width: 100%;
+                margin-top: 20px;
+                border: 2px solid black;
+                text-align: center;
+            }
+        }
+
+        @media screen and (min-width:570px) and (max-width:768px) {
+            .section-1{
+                display: flex;
+                flex-direction: column;
+            }
+            .img-div{
+                width: 100%;
+                border: 2px solid black;
+                margin: 0 auto;
+            }
+            .img-div img{
+                width: 100%;
+            }
+            .text{
+                width: 100%;
+                margin-top: 20px;
+                border: 2px solid black;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:1291px) {
+            .section-1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .img-div{
+                width: 30%;
+            }
+            .img-div img{
+                width: 100%;
+            }
+            .text{
+                width: 70%;
+                border: 2px solid black;
+                text-align: center;
+            }
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <section>
+        <div class="section-1">
+            <div class="img-div">
+                <img src="./img/mern2.jpeg" alt="">
+            </div>
+            <div class="text">
+                <h1>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, minima.
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente officia ex officiis dicta libero, laudantium tenetur adipisci sed veritatis voluptas, eius unde, esse corrupti dolor quas temporibus quaerat quia. Animi cum, odit possimus eum consequuntur repudiandae iure quis tenetur blanditiis praesentium error molestias omnis dolorem quod officia impedit ab eaque corporis alias dolor quo aperiam cupiditate voluptas? Inventore ducimus, recusandae, magni dolores ipsam animi delectus ut minima voluptate, veritatis unde eum tenetur officia corporis cumque adipisci tempora beatae dolore laboriosam accusantium voluptatum odio. Corporis ullam necessitatibus quis inventore amet atque totam officiis! Molestiae sed reprehenderit fuga. Nesciunt sint possimus voluptas?
+                </p>
+                <button class="btn" >Read More</button>
+            </div>
+        </div>
+        <div class="section-1">
+            <div class="img-div">
+                <img src="./img/mern2.jpeg" alt="">
+            </div>
+            <div class="text">
+                <h1>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur, minima.
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente officia ex officiis dicta libero, laudantium tenetur adipisci sed veritatis voluptas, eius unde, esse corrupti dolor quas temporibus quaerat quia. Animi cum, odit possimus eum consequuntur repudiandae iure quis tenetur blanditiis praesentium error molestias omnis dolorem quod officia impedit ab eaque corporis alias dolor quo aperiam cupiditate voluptas? Inventore ducimus, recusandae, magni dolores ipsam animi delectus ut minima voluptate, veritatis unde eum tenetur officia corporis cumque adipisci tempora beatae dolore laboriosam accusantium voluptatum odio. Corporis ullam necessitatibus quis inventore amet atque totam officiis! Molestiae sed reprehenderit fuga. Nesciunt sint possimus voluptas?
+                </p>
+                <button class="btn" >Read More</button>
+            </div>
+        </div>    </section>
+</body>
+</html>

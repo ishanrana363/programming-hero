@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <style>
+        .div-1{
+            width: 30%;
+            background-color: rgb(226, 218, 218);
+            height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        .div-2{
+            width: 70%;
+            background-color: rgb(235, 235, 180) ;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+        }
+
+        @media screen and (max-width:570px) {
+            .main{
+                display: flex;
+                flex-direction: column;
+            }
+            .div-1{
+            width: 100%;
+            background-color: rgb(226, 218, 218);
+            height: 30vh;
+            border: 1px solid black;
+        }
+        .div-2 {
+            width: 100%;
+            background-color: rgb(235, 235, 180) ;
+            height: 40vh;
+        }
+        .left{
+            margin:  auto;
+            
+        }
+        
+        
+    }
+
+    </style>
+</head>
+<body>
+    <section class="main" >
+        <div class="div-1">
+            <h1 class="left" >Left</h1>
+        </div>
+        <div class="div-2">
+            <h1>Right</h1>
+        </div>
+    </section>
+</body>
+</html>

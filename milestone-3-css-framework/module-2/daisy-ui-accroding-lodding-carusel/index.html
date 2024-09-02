@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daisy ui</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Exploring daisy ui accorodian carousel lodding </h1>
+    <div class="dropdown">
+        <div tabindex="0" role="button" class="btn m-1">Click</div>
+            <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+            </ul>
+        </div>
+        <details class="dropdown">
+            <summary class="btn m-1">open or close</summary>
+                <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+                </ul>
+        </details>
+            <details class="dropdown">
+            <summary class="btn m-1">open or close</summary>
+                <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+                </ul>
+            </details>
+
+            <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+        <h3 class="text-lg font-bold">Hello!</h3>
+        <p class="py-4">Press ESC key or click the button below to close</p>
+        <div class="modal-action">
+        <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+        </form>
+        </div>
+    </div>
+    </dialog>
+
+    <input type="checkbox" value="synthwave" class="toggle theme-controller" />
+
+    <h1>accrodian</h1>
+
+    <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div class="collapse-content">
+            <p>hello</p>
+        </div>
+    </div>
+
+
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+            <p>hello</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+            <p>hello</p>
+            </div>
+        </div>
+
+        <h1>Avatara</h1>
+        <div class="avatar">
+            <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+        </div>
+
+        <h1>card</h1>
+
+
+            <div class="card card-compact bg-base-100 w-96 shadow-xl">
+                <figure>
+                <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                <h2 class="card-title">Shoes!</h2>
+                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                </div>
+                </div>
+            </div>
+
+            <h1>carousel</h1>
+
+
+            <div class="carousel w-full">
+                <div id="item1" class="carousel-item w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                    class="w-full" />
+                </div>
+                <div id="item2" class="carousel-item w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                    class="w-full" />
+                </div>
+                <div id="item3" class="carousel-item w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                    class="w-full" />
+                </div>
+                <div id="item4" class="carousel-item w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                    class="w-full" />
+                </div>
+              </div>
+              <div class="flex w-full justify-center gap-2 py-2">
+                <a href="#item1" class="btn btn-xs">1</a>
+                <a href="#item2" class="btn btn-xs">2</a>
+                <a href="#item3" class="btn btn-xs">3</a>
+                <a href="#item4" class="btn btn-xs">4</a>
+              </div>
+
+
+              <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                    class="w-full" />
+                  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                    class="w-full" />
+                  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                    class="w-full" />
+                  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                    class="w-full" />
+                  <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Item 1</a></li>
+                      <li>
+                        <a>Parent</a>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </li>
+                      <li><a>Item 3</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl">daisyUI</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a>Item 1</a></li>
+                    <li>
+                      <details>
+                        <summary>Parent</summary>
+                        <ul class="p-2">
+                          <li><a>Submenu 1</a></li>
+                          <li><a>Submenu 2</a></li>
+                        </ul>
+                      </details>
+                    </li>
+                    <li><a>Item 3</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn">Button</a>
+                </div>
+              </div>
+
+              <ul class="steps steps-vertical">
+                <li class="step step-primary">Register</li>
+                <li class="step step-primary">Choose plan</li>
+                <li class="step">Purchase</li>
+                <li class="step">Receive Product</li>
+              </ul>
+
+            <h1>loading</h1>
+
+            <span class="loading loading-ring loading-xs"></span>
+        <span class="loading loading-ring loading-sm"></span>
+        <span class="loading loading-ring loading-md"></span>
+        <span class="loading loading-ring loading-lg"></span>
+
+</body>
+</html>
