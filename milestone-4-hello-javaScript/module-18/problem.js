@@ -15,3 +15,11 @@
 
 // const array = ["html","css","tailwind","daisyUi","javaScript"];
 // console.log(array);
+
+var mobile = ["samsung","itel","lenavo","realme","narzo","walton","i-phone"];
+var number = 0;
+
+while(mobile.length>number){
+    console.log(mobile);
+    number++
+}
