@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom</title>
+  </head>
+  <body>
+    <button onclick="document.body.style.backgroundColor='red'" >red</button>
+    <button onclick="changeColor()" id="make-purple" >make-purple</button>
+    <button onclick="makeGrren()" id="make-green" >make-green</button>
+    <script>
+        function changeColor () {
+            const btn = document.getElementById("make-purple");
+            btn.addEventListener("click",()=>{
+                document.body.style.backgroundColor = "purple"
+            })
+        }
+
+        function makeGrren () {
+            let green= document.getElementById("make-green");
+            green.onclick = changeGreenColor;
+            // green.click = alert("ishan")
+
+        }
+
+        function changeGreenColor () {
+            document.body.style.backgroundColor = "green"
+        }
+
+    </script>
+  </body>
+</html>
