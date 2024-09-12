@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom-Selector</title>
+  </head>
+  <body>
+    <h1 id="text-change">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, accusamus.
+    </h1>
+    <button id="btn-1">change-text</button> <br> <br>
+
+    <h1 id="show-text">Lorem ipsum dolor sit amet.</h1> <br> <br>
+
+    <input type="text" id="input-text" /> <br /><br />
+
+    <button id="update-text">Update Text</button>
+
+    <script>
+      document.getElementById("btn-1").addEventListener("click", () => {
+        document.getElementById("text-change").innerText = "chomolloko";
+      });
+
+      document.getElementById("update-text").addEventListener("click", () => {
+        let inputText = document.getElementById("input-text").value;
+        let textId = document.getElementById("show-text");
+        textId.innerHTML = inputText;
+        document.getElementById("input-text").value = ''; // Clear the input field
+      });
+      
+    </script>
+  </body>
+</html>
