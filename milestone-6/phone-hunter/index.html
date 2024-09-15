@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone hunter</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <h1>Hunting phone</h1>
+    <header></header>
+    <main>
+      <section class="bg-gray-300 my-6 p-4">
+        <div class=" ">
+          <input
+            type="text"
+            id="input-value"
+            placeholder="search...."
+            class="input input-bordered w-full max-w-xs"
+          />
+          <button onclick="handleSearch()" class="btn btn-success">
+            Search
+          </button>
+        </div>
+        <div></div>
+      </section>
+      <section id="lodder-section" class="max-w-screen-xl mx-auto hidden">
+        <div class="text-center my-52">
+          <span class="loading loading-spinner loading-lg text-primary"></span>
+        </div>
+      </section>
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
+          <div class="modal-box bg-purple-700 ">
+            <h3 id="brand-name" class="text-lg font-bold">!</h3>
+            <p class="py-4">Press ESC key or click the button below to close</p>
+            <div id="details-container" >
+
+            </div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+      <section>
+        <div
+          id="phone-container"
+          class="md:grid md:grid-cols-3 md:gap-8 lg:grid lg:grid-cols-4 lg:gap-6 mx-auto"
+        ></div>
+      </section>
+      <div class="hidden" id="btn-container">
+        <button id="load-more-data-btn" class="btn btn-accent">
+          Load more
+        </button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="main.js"></script>
+  </body>
+</html>
