@@ -1,13 +1,26 @@
-const man = {
-    name : "kodu",
-    height : 6,
-    age : 32,
-    dis : "dinajpur",
-    isHonest : true
+// const man = {
+//     name : "kodu",
+//     height : 6,
+//     age : 32,
+//     dis : "dinajpur",
+//     isHonest : true
+// };
+
+// console.log(typeof man)
+
+// const parseValuetoJson = JSON.stringify(man);
+
+const shop = {
+    address : {
+        streetNo : 4,
+        placeName : "Dhaka",
+        city : "Dhaka",
+    },
+    product : ['mik','monitor','kolom','desktop'],
+    isOpen : true,
 };
 
-console.log(typeof man)
+const prseJson = JSON.stringify(shop);
 
-const parseValuetoJson = JSON.stringify(man);
-
-console.log( typeof parseValuetoJson);
+const prseString = JSON.parse(prseJson);
+console.log(prseString)
