@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo show</title>
+    <style>
+      #todo-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .post {
+        background-color: navajowhite;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border-radius: 20px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section>
+      <button onclick="displayTodo()">show todo</button>
+      <div id="todo-section"></div>
+    </section>
+    <script src="todo.js"></script>
+  </body>
+</html>
