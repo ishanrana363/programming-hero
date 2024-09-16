@@ -1,12 +1,13 @@
 
 import './App.css'
+import Todo from './Todo';
 
 function App() {
 
   return (
     <>
       
-      <h1>Vite + React</h1>
+      {/* <h1>Vite + React</h1>
       
       <h1>Hello react js</h1>
 
@@ -20,7 +21,16 @@ function App() {
       <Device name = "asus" price = "55k" ></Device>
       <Device name = "walton" price="60k" ></Device>
       <Device name = "samsung" price = "65k" ></Device>
-      <Device name = "mackbook" price = "100k" ></Device>
+      <Device name = "mackbook" price = "100k" ></Device> */}
+
+      <Todo name = "React js" isDone = {true} ></Todo>
+      <Todo name = "React js core concepts" isDone = {false} ></Todo>
+      <Todo name = "Html" isDone = {true} ></Todo>
+      <Todo name = "css" isDone = {false} ></Todo>
+      <Todo name = "Tailwind CSS" isDone = {true} ></Todo>
+      <Todo name = "NodeJs" isDone = {true} ></Todo>
+      <Todo name = "Express JS" isDone = {false} ></Todo>
+
       
 
     </>
@@ -36,7 +46,7 @@ function Student ({name,grade}) {
     fontSize : "30px",
     backgroundColor : "gray",
     padding : "20px",
-    borderRadius : "30px",
+    borderRadius : "20px",
     border : "2px solid red",
     marginTop : "20px"
   }
