@@ -55,3 +55,20 @@
 // }
 
 // export default Todo
+
+import React from 'react'
+
+const Todo = ({name,isDone}) => {
+    let item;
+    if(isDone){
+        item = <li>Todo finish :  {name} </li>;
+    } 
+    else {
+        item = <li>learing finish :  {name} </li>;
+    }
+    return (
+        item
+    )
+}
+
+export default Todo
