@@ -10,8 +10,8 @@ function App() {
       
       <h1>Hello react js</h1>
 
-      <Student></Student>
-      <Student></Student>
+      <Student grade = "4" name  = "khail" ></Student>
+      <Student grade = "5" name = "jodu" ></Student>
 
 
 
@@ -30,27 +30,27 @@ function App() {
 export default App;
 
 
-function Student () {
-  // const styleList = {
-  //   color : "red",
-  //   fontSize : "50px",
-  //   backgroundColor : "blue",
-  //   padding : "20px",
-  //   borderRadius : "120px",
-  //   border : "2px solid red",
-  //   marginTop : "20px"
-  // }
+function Student ({name,grade}) {
+  const styleList = {
+    color : "white",
+    fontSize : "30px",
+    backgroundColor : "gray",
+    padding : "20px",
+    borderRadius : "30px",
+    border : "2px solid red",
+    marginTop : "20px"
+  }
   return (
-    <div  >
-      <h1  >name : ishan</h1>
+    <div style={styleList} >
+      <h1  >name : {name} grade : {grade} </h1>
     </div>
   )
 }
 
-function Device (props) {
+function Device ({name,price}) {
   return(
     <div>
-      <h1>Laptop name is : {props.name} price is : ${props.price} </h1>
+      <h1>Laptop name is : {name} price : {price}  </h1>
       
     </div>
   )
