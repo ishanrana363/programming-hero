@@ -29,15 +29,29 @@
 
 // export default Todo
 
-import React from "react";
+// import React from "react";
 
-const Todo = ({ name, isDone }) => {
-  return <div>
-    <li>
-        {name} : {isDone && `todo finish`} 
-    </li>
+// const Todo = ({ name, isDone }) => {
+//   return <div>
+//     <li>
+//         {name} : {isDone && `todo finish`} 
+//     </li>
     
-  </div>;
-};
+//   </div>;
+// };
 
-export default Todo;
+// export default Todo;
+
+// import React from 'react'
+
+// const Todo = ({name,isDone}) => {
+//   return (
+//     <div>
+//       <li>
+//         {name} : {isDone || `todo learning `}
+//       </li>
+//     </div>
+//   )
+// }
+
+// export default Todo
