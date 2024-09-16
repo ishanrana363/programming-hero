@@ -28,3 +28,16 @@
 // }
 
 // export default Todo
+
+import React from "react";
+
+const Todo = ({ name, isDone }) => {
+  return <div>
+    <li>
+        {name} : {isDone && `todo finish`} 
+    </li>
+    
+  </div>;
+};
+
+export default Todo;
