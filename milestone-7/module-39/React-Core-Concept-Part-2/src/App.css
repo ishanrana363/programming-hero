@@ -44,3 +44,9 @@
 .btn-2{
   margin-left: 20px;
 }
+
+.postData{
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 20px;
+}
