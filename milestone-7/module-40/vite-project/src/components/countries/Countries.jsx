@@ -5,6 +5,7 @@ import Country from "../country/Country";
 const Countries = () => {
   const [data, setData] = useState([]);
   const [visitedCountry, setVisitedCountry] = useState([]);
+  const [flagCountry, setFlagCountry] = useState([]);
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
@@ -18,6 +19,12 @@ const Countries = () => {
     setVisitedCountry([...visitedCountry,countryCode])
   };
 
+  const handleFlagCountry = (flagData)=>{
+    console.log(flagData.flags.png)
+    setFlagCountry([...flagCountry, flagData])
+  }
+  
+
   return (
     <>
     <div>
@@ -29,6 +36,15 @@ const Countries = () => {
               </div>
             ))
         }
+        <h1>Visited country flag img</h1>
+        {
+            flagCountry.map((flag, index) => (
+              <div key={index}>
+                <img src={flag.flags.png} alt="flag" />
+              </div>
+            ))
+        }
+        
     </div>
       <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-10  ">
         {data.map((item, i) => {
@@ -36,6 +52,7 @@ const Countries = () => {
             <div key={i}>
               <div className="">
                 <Country
+                handleFlagCountry = {handleFlagCountry}
                   handleVisitCountry={handleVisitCountry}
                   countryData={item}
                 ></Country>
