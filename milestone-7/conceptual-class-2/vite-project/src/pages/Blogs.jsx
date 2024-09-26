@@ -1,9 +1,14 @@
 import React from "react";
-import { NavLink, useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData, useNavigation } from "react-router-dom";
 import Blog from "../components/Blog";
+import SpinnerLodding from "../components/SpinnerLodding";
 
 const Blogs = () => {
   const blog = useLoaderData();
+  const navigation = useNavigation();
+  if(navigation.state === "loading"){
+    return <SpinnerLodding />
+  }
   
   return (
     <div>
@@ -33,7 +38,7 @@ const Blogs = () => {
           </NavLink>
           <div className="grid  justify-center grid-cols-1 md:gap-6 md:gap-y-6 sm:grid-cols-2 lg:grid-cols-3  text-black ">
             {
-              blog.map((item,i)=>{
+              blog.slice(1,19).map((item,i)=>{
                 return(
                   <div key={i} >
                     <Blog blogData = {item} ></Blog>
@@ -43,7 +48,7 @@ const Blogs = () => {
             }
           </div>
 
-
+            
           
         </div>
       </section>

@@ -8,6 +8,9 @@ import Bookmarks from "./pages/Bookmarks.jsx";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home.jsx";
 import SingleBlogDetails from "./pages/SingleBlogDetails.jsx";
+import Content from "./components/Content.jsx";
+import Author from "./components/Author.jsx";
+import { Toaster } from "react-hot-toast";
 
 // Define routes here
 const router = createBrowserRouter([
@@ -17,26 +20,44 @@ const router = createBrowserRouter([
     children: [
       { 
         path: "/", 
-        element: <Home></Home> },
+        element: <Home></Home> 
+      },
       { 
         path: "blogs", 
         element: <Blogs /> ,
-        loader : ()=> fetch(`https://dev.to/api/articles?per_page=20&top=7`) 
+        loader: () => fetch(`https://dev.to/api/articles?per_page=20&top=7`) 
       },
       { 
         path: "bookmarks", 
         element: <Bookmarks /> 
       },
       {
-        path : "blog/:id", 
-        element : <SingleBlogDetails></SingleBlogDetails>,
-        loader : ({params}) => fetch(`https://dev.to/api/articles/${params.id}`)  // Replace with your API endpoint for single blog details
+        path: "blog/:id", 
+        element: <SingleBlogDetails></SingleBlogDetails>,
+        loader: ({ params }) => fetch(`https://dev.to/api/articles/${params.id}`),
+        children: [
+          {
+            index: true, 
+            element: <Content></Content>,
+            loader: ({ params }) => fetch(`https://dev.to/api/articles/${params.id}`)
+          },
+          {
+            path: "author",
+            element: <Author></Author>,
+            loader: ({ params }) => fetch(`https://dev.to/api/articles/${params.id}`)
+          }
+        ]
       }
-    ],
-  },
+    ]
+  }
 ]);
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
+    <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
   </StrictMode>
 );

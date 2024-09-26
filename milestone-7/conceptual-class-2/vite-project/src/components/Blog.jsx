@@ -2,10 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import placeholderImg from "../assets/placeholder.png"
 
-const Blog = ({ blogData }) => {
+const Blog = ({ blogData,isDelete,handleDeleteBookmark }) => {
   const { cover_image, title, description, published_at, id } = blogData;
   return (
-    <div>
+    <div className="flex relative " >
       <div className="border-2 border-primary hover:border-secondary border-opacity-30 transition hover:scale-105 " >
         <NavLink
           rel="noopener noreferrer"
@@ -28,15 +28,13 @@ const Blog = ({ blogData }) => {
           </div>
         </NavLink>
       </div>
+      <div>
+        {
+          isDelete && <buttto onClick = {()=>{handleDeleteBookmark(id)}} className = " p-2 text-white bg-primary cursor-pointer rounded-full absolute -ml-28 -mt-4 " > Delete </buttto>
+        }
+      </div>
 
-      {/* <div className="flex justify-center">
-        <button
-          type="button"
-          className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-900 text-gray-400"
-        >
-          Load more posts...
-        </button>
-      </div> */}
+      
     </div>
   );
 };
