@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./components/nav-bar/NavBar";
 import PriceOptions from "./components/price-options/PriceOptions";
 import LineChart from "./components/react-chart/LineChart";
+import PhoneChart from "./components/phone/PhoneChart";
 // import DaisyNav from "./components/daisynav/DaisyNav";
 
 const App = () => {
@@ -10,7 +11,8 @@ const App = () => {
       {/* <DaisyNav></DaisyNav> */}
       {/* <NavBar></NavBar>
       <PriceOptions></PriceOptions> */}
-      <LineChart></LineChart>
+      {/* <LineChart></LineChart> */}
+      <PhoneChart></PhoneChart>
     </div>
   );
 };
