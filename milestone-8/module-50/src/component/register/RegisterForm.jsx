@@ -1,36 +1,51 @@
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import app from './../../firebase/firebase.config';
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 
 
-const LoginFrom = () => {
+const RegisterForm = () => {
+    const [registerError, setRegisterError] = useState('');
+    const [success, setSuccess] = useState('');
     const [toggle, setToggle] = useState(false);
-    const auth = getAuth(app);
-    
     const handleSubmit = (e) => {
+        e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-        .then((result)=>{
-            console.log(result);
-            console.log("User signed in successfully!");
-            
-        }).catch((error) => {
-            console.log(error.message);
-        })
-        
-    }
+        const terms = e.target.terms.checked;
 
+        setRegisterError('');
+        setSuccess('');
+        if (password.length < 6) {
+            setRegisterError("Password must be at least 6 characters");
+            return;
+        } else if (!/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8}$/.test(password)) {
+            setRegisterError("Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character");
+            return;
+        } else if (!terms) {
+            setRegisterError("You must agree to the terms and conditions");
+            return;
+        }
+
+
+        const auth = getAuth(app);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                setSuccess('User created successfully');
+                const user = result;
+                console.log(user);
+            }).catch((error) => {
+                setRegisterError(error.message);
+                console.error('Error creating user:', error);
+            });
+
+    };
     return (
         <div>
             <div className="flex items-center justify-center min-h-screen bg-gray-100">
                 <div className="w-full max-w-sm p-6 bg-white rounded shadow-md">
-                    <h2 className="mb-6 text-2xl font-semibold text-center text-gray-700">Login Form </h2>
+                    <h2 className="mb-6 text-2xl font-semibold text-center text-gray-700">Register</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-600">Email</label>
@@ -60,8 +75,9 @@ const LoginFrom = () => {
                             </div>
                         </div>
 
-                        <div>
-                            <NavLink to={"/forget-password"} >Forget password</NavLink>
+                        <div className="mb-4 -mt-3"  >
+                            <input type="checkbox" name="terms" id="terms" />
+                            <label className="ml-3" htmlFor="terms">Accept terms & condiction </label>
                         </div>
 
                         <button
@@ -70,6 +86,8 @@ const LoginFrom = () => {
                         >
                             Register
                         </button>
+                        {success && <p className="text-green-500">{success}</p>}
+                        {registerError && <p className="text-red-500">{registerError}</p>}
                     </form>
                 </div>
             </div>
@@ -78,4 +96,4 @@ const LoginFrom = () => {
     )
 }
 
-export default LoginFrom
+export default RegisterForm;

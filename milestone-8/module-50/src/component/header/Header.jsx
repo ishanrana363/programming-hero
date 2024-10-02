@@ -52,7 +52,10 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <button className="btn btn-primary" > <NavLink to={"/register"} >Login</NavLink></button>
+                    <button className="btn btn-primary" > <NavLink to={"/register"} >Registration</NavLink></button>
+                </div>
+                <div className="navbar-end">
+                    <button className="btn btn-primary" > <NavLink to={"/login"} >Login</NavLink></button>
                 </div>
             </div>
         </div>
